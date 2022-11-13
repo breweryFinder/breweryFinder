@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brewery Finder</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brewery Selector</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <header>
+        <h1 id="pageTitle">Choose Your Brewery!</h1>
+        <div class="formContainer">
 
-  <header class="homepageHeader">
-    <div class="wrapper">
-      <h1>Brewery Finder</h1>
-    </div> <!-- end of wrapper -->
-  </header>
+            <!-- State Selector -->
+            <form action="" class="state">
+                <label for="state">Which State do you want to visit?</label>
+                <select name="state" id="state">
+                    <option value="state1">State 1</option>
+                    <option value="state2">State 2</option>
+                    <option value="state3">State 3</option>
+                    <option value="state4">State 4</option>
+                    <option value="state5">State 5</option>
+                    <option value="state6">State 6</option>
+                    <option value="state7">State 7</option>
+                    <option value="state8">State 8</option>
+                    <option value="state9">State 9</option>
+                    <option value="state10">State 9</option>
+                </select>
+            </form>
 
-  <main>
-    <section class="formSection">
+            <!-- Brewery Type Selector -->
+            <form action="" class="brewType">
+                <label for="brewType">What kind of brewery do you want?</label>
+                <select name="brewType" id="brewType">
+                    <option value="micro">Micro</option>
+                    <option value="regional">Regional</option>
+                    <option value="brewpub">Brew Pub</option>
+                    <option value="bar">Bar</option>
+                </select>
+            </form>
+        </div>
+    </header>
 
-      <div class="wrapper">
-        <div class="formsContainer">
-          <form action="">
+    <main>
+        <div class="wrapper">
+            <h2>Your Choices Are:</h2>
+            <ul id="breweryDisplay">
+                <!-- Three options will be displayed here -->
+            </ul>
+        </div>
+    </main>
 
-          </form>
-          <form action="">
-
-          </form>
-        </div><!-- end of formsContainer -->
-      </div><!-- end of wrapper -->
-    
-    </section><!-- end of formSection -->
-
-    <section class="userResultsSection">
-      <div class="wrapper">
-        <h2>Our Top Picks For your Area</h2>
-        <ul class="breweryResults">
-          <!-- input results will go here -->
-        </ul>
-      </div><!-- end of wrapper -->
-    </section><!-- end of userResultsSection -->
-  </main>
-  <footer>
-    <p>Made at Juno College</p>
-  </footer>
-
+    <script src="app.js"></script>
 </body>
+
 </html>
