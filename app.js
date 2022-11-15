@@ -12,9 +12,9 @@ breweryApp.getState = (query) => {
     
     const stateUrl = new URL('https://api.openbrewerydb.org/breweries?by_state');
     stateUrl.search = new URLSearchParams({
-        brewery_type: stateUrl.brewery_type,
-        state: breweryApp.state,
-        name: breweryApp.name
+        brewery_type: breweryApp.userType,
+        state: breweryApp.userState
+        
     })
     fetch(stateUrl)
     .then(res => {
@@ -26,24 +26,7 @@ breweryApp.getState = (query) => {
 }
 breweryApp.getState();
 
-// By Type
-breweryApp.getBrewType = (query) => {
-    
-    const brewTypeUrl = new URL('https://api.openbrewerydb.org/breweries?by_state');
-    brewTypeUrl.search = new URLSearchParams({
-        brewery_type: breweryApp.brewery_type,
-        state: breweryApp.state,
-        name: breweryApp.name
-    })
-    fetch(brewTypeUrl)
-    .then(res => {
-    return res.json();
-    })
-    .then(data => {
-        console.log('Brewery Type Data', data);
-    })
-}
-breweryApp.getBrewType();
+
 
 // Step 1b:
 // Create variables that target each item/value we need (state, brewery type, randomizer for stretch goal)
