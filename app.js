@@ -7,6 +7,7 @@ const breweryApp = {};
 
 // State and Type are separate functions
 // By State 
+
 breweryApp.getState = (query) => {
     
     const stateUrl = new URL('https://api.openbrewerydb.org/breweries?by_state');
@@ -215,5 +216,3 @@ breweryApp.init();
     //     artApp.displayArt(art.artObjects)
 
     // }
-
-    // blayh blah
