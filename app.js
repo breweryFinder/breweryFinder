@@ -25,12 +25,27 @@ breweryApp.getCity = (query) => {
 }
 breweryApp.getCity();
 
-
+// Function to display Breweries
 breweryApp.displayData = (results) => {
     results.forEach((result) => {
-        console.log(result.brewery_type)
-        console.log(result.city)
+        
+        const breweryName = document.createElement('h2');
+        breweryName.innerText = result.name;
         console.log(result.name)
+        console.log(breweryName)
+
+        const breweryType = document.createElement('h3');
+        breweryType.innerText = result.brewery_type;
+        console.log(result.brewery_type)
+        console.log(breweryType)
+
+        const breweryCity = document.createElement('h4');
+        breweryCity.innerText = result.city;
+        console.log(result.city)
+        console.log(breweryCity)
+
+        const breweryContainer = document.createElement('li');
+        breweryContainer.classList.add('breweryBox')
     })
 }
 
@@ -89,6 +104,15 @@ breweryApp.init();
 // Phase 2:
 // That content is then displayed to the page
 // Create variable to clear user input after submission
+
+
+
+
+
+
+
+
+
 
 // !!! ART CODEALONG !!!
 

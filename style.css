@@ -69,3 +69,13 @@ ul {
     gap: 50px;
     list-style: none;
 }
+
+.breweryBox {
+    border: 2px solid white;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+
+}
