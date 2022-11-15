@@ -5,31 +5,31 @@
 // Create namespace
 const breweryApp = {};
 
-// State and Type are separate functions
-// By State 
-breweryApp.getState = (query) => {
+// City and Type are separate functions
+// By City 
+breweryApp.getCity = (query) => {
     
-    const stateUrl = new URL('https://api.openbrewerydb.org/breweries?by_state');
-    stateUrl.search = new URLSearchParams({
-        by_state: `new_york`,
+    const cityUrl = new URL('https://api.openbrewerydb.org/breweries?');
+    cityUrl.search = new URLSearchParams({
+        by_city: `los_angeles`,
         by_type: `micro`
     })
-    fetch(stateUrl)
+    fetch(cityUrl)
     .then(res => {
     return res.json();
     })
     .then(data => {
-        console.log('State Data', data);
+        console.log('City Data', data);
         breweryApp.displayData(data);
     })
 }
-breweryApp.getState();
+breweryApp.getCity();
 
 
 breweryApp.displayData = (results) => {
     results.forEach((result) => {
         console.log(result.brewery_type)
-        console.log(result.state)
+        console.log(result.city)
         console.log(result.name)
     })
 }
