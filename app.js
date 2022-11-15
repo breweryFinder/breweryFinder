@@ -31,21 +31,26 @@ breweryApp.displayData = (results) => {
         
         const breweryName = document.createElement('h2');
         breweryName.innerText = result.name;
-        console.log(result.name)
+        // console.log(result.name)
         console.log(breweryName)
-
-        const breweryType = document.createElement('h3');
-        breweryType.innerText = result.brewery_type;
-        console.log(result.brewery_type)
-        console.log(breweryType)
 
         const breweryCity = document.createElement('h4');
         breweryCity.innerText = result.city;
-        console.log(result.city)
+        // console.log(result.city)
         console.log(breweryCity)
-
+        
+        const breweryType = document.createElement('h3');
+        breweryType.innerText = result.brewery_type;
+        // console.log(result.brewery_type)
+        console.log(breweryType)
+        
         const breweryContainer = document.createElement('li');
         breweryContainer.classList.add('breweryBox')
+
+        breweryContainer.append(breweryName, breweryType, breweryCity);
+
+        document.querySelector('#breweryDisplay').append(breweryContainer);
+
     })
 }
 
