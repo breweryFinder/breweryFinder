@@ -1,7 +1,6 @@
 // Step 1a:
 
 // Fetching multiple Brewery APIs at once:
-// const urls = ['https://api.openbrewerydb.org/breweries?by_state?=new_york&per_page=3', 'https://api.openbrewerydb.org/breweries?by_type']
 
 // Create namespace
 const breweryApp = {};
@@ -12,9 +11,8 @@ breweryApp.getState = (query) => {
     
     const stateUrl = new URL('https://api.openbrewerydb.org/breweries?by_state');
     stateUrl.search = new URLSearchParams({
-        brewery_type: stateUrl.brewery_type,
-        state: breweryApp.state,
-        name: breweryApp.name
+        by_state: `new_york`,
+        by_type: `micro`
     })
     fetch(stateUrl)
     .then(res => {
@@ -22,18 +20,27 @@ breweryApp.getState = (query) => {
     })
     .then(data => {
         console.log('State Data', data);
+        breweryApp.displayData(data);
     })
 }
 breweryApp.getState();
 
+
+breweryApp.displayData = (results) => {
+    results.forEach((result) => {
+        console.log(result.brewery_type)
+        console.log(result.state)
+        console.log(result.name)
+    })
+}
+
 // By Type
 breweryApp.getBrewType = (query) => {
     
-    const brewTypeUrl = new URL('https://api.openbrewerydb.org/breweries?by_state');
+    const brewTypeUrl = new URL('https://api.openbrewerydb.org/breweries?by_type');
     brewTypeUrl.search = new URLSearchParams({
-        brewery_type: breweryApp.brewery_type,
-        state: breweryApp.state,
-        name: breweryApp.name
+        by_state: `new_york`,
+        by_type: `micro`
     })
     fetch(brewTypeUrl)
     .then(res => {
