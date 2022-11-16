@@ -19,6 +19,7 @@ breweryApp.getAPI = (city, type) => {
     })
     .then(data => {
         console.log('Brewery Data', data);
+        document.querySelector('#breweryDisplay').innerHTML = '';
         breweryApp.displayData(data);
     })
 }
