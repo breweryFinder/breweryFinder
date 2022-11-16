@@ -77,7 +77,7 @@ breweryApp.displayData = (results) => {
 breweryApp.getValues = () => {
     document.querySelector('form').addEventListener('submit', (e) => {
         e.preventDefault();
-            const city = document.querySelector("#cities").value;
+            const city = document.querySelector("#city").value;
             console.log(city)
             const type = document.querySelector('#type').value;
             console.log(type)
