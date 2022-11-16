@@ -6,16 +6,12 @@ const breweryApp = {};
 // Fetching by_city and by_type from Brewery API:
 // City and Type are separate calls
 // By City 
-<<<<<<< HEAD
-breweryApp.getCity = () => {
-=======
-breweryApp.getBrewery = () => {
->>>>>>> 7e41095748d587a3f0feaa020bda12b60d28e8d8
+breweryApp.getAPI = (city, type) => {
     
     const breweryUrl = new URL('https://api.openbrewerydb.org/breweries');
     breweryUrl.search = new URLSearchParams({
-        by_city: `los_angeles`,
-        by_type: `micro`
+        by_city: city,
+        by_type: type
     })
     fetch(breweryUrl)
     .then(res => {
@@ -26,26 +22,7 @@ breweryApp.getBrewery = () => {
         breweryApp.displayData(data);
     })
 }
-breweryApp.getCity();
 
-
-// By Type
-breweryApp.getBreweryType = (query) => {
-    
-    const breweryTypeUrl = new URL('https://api.openbrewerydb.org/breweries?by_type');
-    breweryTypeUrl.search = new URLSearchParams({
-        by_city: `los_angeles`,
-        by_type: `micro`
-    })
-    fetch(breweryTypeUrl)
-    .then(res => {
-        return res.json();
-    })
-    .then(data => {
-        console.log('Brewery Type Data', data);
-    })
-}
-breweryApp.getBreweryType();
 
 // Step 1c: CREATE INIT (see below)
 
@@ -87,14 +64,25 @@ breweryApp.displayData = (results) => {
 // event.preventDefault() - DO WE NEED IT?
 
 // All User Input
-breweryApp.getUserInput = () => {
-        // listen for when the user makes a change in the drop down
-        // get the value of the selected option
-        document.querySelector('#city').addEventListener('change', function(){
-            console.log(this.value)
-            const citySelection = this.value;
-            breweryApp.getBreweryType(citySelection);
-        })
+// breweryApp.getUserInput = () => {
+//         // listen for when the user makes a change in the drop down
+//         // get the value of the selected option
+//         document.querySelector('#city').addEventListener('change', function(){
+//             console.log(this.value)
+//             const citySelection = this.value;
+//             breweryApp.getBreweryType(citySelection);
+//         })
+// }
+
+breweryApp.getValues = () => {
+    document.querySelector('form').addEventListener('submit', (e) => {
+        e.preventDefault();
+            const city = document.querySelector("#cities").value
+            console.log(city)
+            const type = document.querySelector('#type').value
+            console.log(type)
+            breweryApp.getAPI(city, type);
+    })
 }
 
 // Brewery Type Input
@@ -111,25 +99,10 @@ breweryApp.getUserInput = () => {
 // Step 3b:
 // Evaluate input from BOTH drop downs (if/else?)
 
-const compareCityType = () => {
-    const citySelection = breweryApp.getCityInput();
-    const breweryTypeSelection = breweryApp.getTypeInput();
-
-    if (citySelection.selectedIndex != -1 && citySelection.selectedIndex -1) {
-        if (citySelection.options[citySelection.selectedIndex].value == breweryTypeSelection.options[breweryTypeSelection.selectedIndex].value) {
-            alert("please choose another value")
-        return false;
-        } else {
-            return true;
-        }
-    }
-}
-// compareCityType();
-
 // Step 1c:
 // Create init
 breweryApp.init = () => {
-    breweryApp.getUserInput();
+    breweryApp.getValues();
 }
 
 breweryApp.init();
