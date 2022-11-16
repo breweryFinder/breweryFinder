@@ -6,7 +6,7 @@ const breweryApp = {};
 // Fetching by_city and by_type from Brewery API:
 // City and Type are separate calls
 // By City 
-breweryApp.getAPI = (city, type) => {
+breweryApp.getBrewery = () => {
     
     const breweryUrl = new URL('https://api.openbrewerydb.org/breweries');
     breweryUrl.search = new URLSearchParams({
@@ -22,7 +22,7 @@ breweryApp.getAPI = (city, type) => {
         breweryApp.displayData(data);
     })
 }
-
+breweryApp.getBrewery();
 
 // Step 1c: CREATE INIT (see below)
 
