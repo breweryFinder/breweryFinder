@@ -19,6 +19,7 @@ breweryApp.getBrewery = () => {
     })
     .then(data => {
         console.log('Brewery Data', data);
+        document.querySelector('#breweryDisplay').innerHTML = '';
         breweryApp.displayData(data);
     })
 }
