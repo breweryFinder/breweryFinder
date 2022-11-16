@@ -6,19 +6,23 @@ const breweryApp = {};
 // Fetching by_city and by_type from Brewery API:
 // City and Type are separate calls
 // By City 
+<<<<<<< HEAD
 breweryApp.getCity = () => {
+=======
+breweryApp.getBrewery = () => {
+>>>>>>> 7e41095748d587a3f0feaa020bda12b60d28e8d8
     
-    const cityUrl = new URL('https://api.openbrewerydb.org/breweries?');
-    cityUrl.search = new URLSearchParams({
+    const breweryUrl = new URL('https://api.openbrewerydb.org/breweries');
+    breweryUrl.search = new URLSearchParams({
         by_city: `los_angeles`,
         by_type: `micro`
     })
-    fetch(cityUrl)
+    fetch(breweryUrl)
     .then(res => {
     return res.json();
     })
     .then(data => {
-        console.log('City Data', data);
+        console.log('Brewery Data', data);
         breweryApp.displayData(data);
     })
 }
@@ -26,7 +30,7 @@ breweryApp.getCity();
 
 
 // By Type
-breweryApp.getBreweryType = () => {
+breweryApp.getBreweryType = (query) => {
     
     const breweryTypeUrl = new URL('https://api.openbrewerydb.org/breweries?by_type');
     breweryTypeUrl.search = new URLSearchParams({
@@ -82,8 +86,8 @@ breweryApp.displayData = (results) => {
 // NOTE: Right now the drop down input is collected when a city is chosen, but we want to take the values of BOTH city and type WITHIN the SUBMIT BUTTON.... or do we?
 // event.preventDefault() - DO WE NEED IT?
 
-// City Input
-breweryApp.getCityInput = () => {
+// All User Input
+breweryApp.getUserInput = () => {
         // listen for when the user makes a change in the drop down
         // get the value of the selected option
         document.querySelector('#city').addEventListener('change', function(){
@@ -93,25 +97,39 @@ breweryApp.getCityInput = () => {
         })
 }
 
-// Type Input
-breweryApp.getTypeInput = () => {
-        // listen for when the user makes a change in the drop down
-        // get the value of the selected option
-        document.querySelector('#breweryType').addEventListener('change', function(){
-            // console.log(this.value)
-            const breweryTypeselection = this.value;;
-            breweryApp.getBreweryType(breweryTypeselection);
-        })
-}
+// Brewery Type Input
+// breweryApp.getTypeInput = () => {
+//         // listen for when the user makes a change in the drop down
+//         // get the value of the selected option
+//         document.querySelector('#breweryType').addEventListener('change', function(){
+//             // console.log(this.value)
+//             const breweryTypeSelection = this.value;
+//             breweryApp.getBreweryType(breweryTypeSelection);
+//         })
+// }
 
 // Step 3b:
 // Evaluate input from BOTH drop downs (if/else?)
 
+const compareCityType = () => {
+    const citySelection = breweryApp.getCityInput();
+    const breweryTypeSelection = breweryApp.getTypeInput();
+
+    if (citySelection.selectedIndex != -1 && citySelection.selectedIndex -1) {
+        if (citySelection.options[citySelection.selectedIndex].value == breweryTypeSelection.options[breweryTypeSelection.selectedIndex].value) {
+            alert("please choose another value")
+        return false;
+        } else {
+            return true;
+        }
+    }
+}
+// compareCityType();
+
 // Step 1c:
 // Create init
 breweryApp.init = () => {
-    breweryApp.getCityInput();
-    breweryApp.getTypeInput();
+    breweryApp.getUserInput();
 }
 
 breweryApp.init();
