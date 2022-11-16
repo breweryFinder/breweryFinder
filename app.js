@@ -6,7 +6,7 @@ const breweryApp = {};
 // Fetching by_city and by_type from Brewery API:
 // City and Type are separate calls
 // By City 
-breweryApp.getCity = (query) => {
+breweryApp.getCity = () => {
     
     const cityUrl = new URL('https://api.openbrewerydb.org/breweries?');
     cityUrl.search = new URLSearchParams({
@@ -26,7 +26,7 @@ breweryApp.getCity();
 
 
 // By Type
-breweryApp.getBreweryType = (query) => {
+breweryApp.getBreweryType = () => {
     
     const breweryTypeUrl = new URL('https://api.openbrewerydb.org/breweries?by_type');
     breweryTypeUrl.search = new URLSearchParams({
