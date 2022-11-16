@@ -15,12 +15,13 @@
         <div class="formContainer">
 
             <!-- State Selector -->
-            <form action="" class="state">
-                <label for="state">Which City do you want to visit?</label>
-                <select name="city" id="state">
-                    <option value="city">City 1</option>
-                    <option value="city">City 2</option>
-                    <option value="city">City 3</option>
+            <form action="" class="city">
+                <label for="city">Which City do you want to visit?</label>
+                <select name="city" id="city">
+                    <option value="empty">Please Select:</option>
+                    <option value="los_angeles">Los Angeles</option>
+                    <option value="san_diego">San Diego</option>
+                    <option value="chicago">Chicago</option>
                     <option value="city">City 4</option>
                     <option value="city">City 5</option>
                     <option value="city">City 6</option>
@@ -32,9 +33,10 @@
             </form>
 
             <!-- Brewery Type Selector -->
-            <form action="" class="brewType">
-                <label for="brewType">What kind of brewery do you want?</label>
-                <select name="brewType" id="brewType">
+            <form action="" class="breweryType">
+                <label for="breweryType">What kind of brewery do you want?</label>
+                <select name="breweryType" id="breweryType">
+                    <option value="empty">Please Select:</option>
                     <option value="micro">Micro</option>
                     <option value="regional">Regional</option>
                     <option value="brewpub">Brew Pub</option>
