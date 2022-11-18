@@ -23,6 +23,7 @@ breweryApp.getBrewery = (city, type) => {
 
 // For each loop that displays the data recieved from the api call
 breweryApp.displayData = (results) => {
+        
         results.forEach((result) => {
         
         const breweryName = document.createElement('h2');
