@@ -1,7 +1,7 @@
-
+// Object for Namespacing
 const breweryApp = {};
 
-
+// API call
 breweryApp.getBrewery = (city, type) => {
     
     const breweryUrl = new URL('https://api.openbrewerydb.org/breweries');
@@ -21,7 +21,7 @@ breweryApp.getBrewery = (city, type) => {
 
 
 
-
+// For each loop that displays the data recieved from the api call
 breweryApp.displayData = (results) => {
         results.forEach((result) => {
         
@@ -49,7 +49,7 @@ breweryApp.displayData = (results) => {
 
 
 
-
+// Event Listener for drop down selection
 breweryApp.getValues = () => {
     document.querySelector('form').addEventListener('submit', (e) => {
         e.preventDefault();
@@ -60,7 +60,7 @@ breweryApp.getValues = () => {
 }
 
 
-
+// App intilization
 breweryApp.init = () => {
     breweryApp.getValues();
 }
