@@ -15,7 +15,7 @@ breweryApp.getAPI = (city, type) => {
     return res.json();
     })
     .then(data => {
-        breweryApp.inputRefresh;
+        document.querySelector('#breweryDisplay').innerHTML = '';
         breweryApp.inputChecker(data);
         
     })
@@ -67,7 +67,7 @@ breweryApp.getValues = () => {
 // Error handling 
 breweryApp.inputChecker = (data) => {
     if (data.length === 0){
-        breweryApp.inputRefresh;
+        
         const errorMessage = document.createElement('h2');
         errorMessage.innerText = ("Sorry there doesnt seem to be any results for that combination");
         errorMessage.classList.add('errorMessageText');
@@ -76,7 +76,7 @@ breweryApp.inputChecker = (data) => {
     }
     
     else {
-        breweryApp.inputRefresh;
+        
         breweryApp.displayData(data);
     }}
 
@@ -88,3 +88,4 @@ breweryApp.init = () => {
 }
 
 breweryApp.init();
+
