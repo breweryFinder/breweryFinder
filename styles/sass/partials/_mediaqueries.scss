@@ -2,6 +2,31 @@
 
 // ORIGINAL STYLES ARE SET FOR 1750PX MONITOR
 
+// LARGE SCREENS
+@media (min-width: 1800px) {
+    .wrapper {
+        max-width: 1900px;
+    }
+    header {
+        height: 75vh;
+
+        .beer-foam {
+            left: 45rem;
+        }
+        label {
+            font-size: 2rem;
+        }
+        select {
+            width: 15rem;
+            right: -5rem;
+            height: 3rem;
+        }
+        input[type="submit"] {
+            margin-top: 3rem;
+        }
+    }
+}
+
 
 // LAPTOP
 @media (max-width: 1400px) {

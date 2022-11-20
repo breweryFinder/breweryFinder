@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:700,900);
-@import url(https://fonts.googleapis.com/css?family=Lato:700,900);
+@import url("https://fonts.googleapis.com/css2?family=Sono&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -265,6 +265,10 @@ h1, h2, body {
   font-family: "Lato", "Helvetica", "Arial", sans-serif;
 }
 
+label, select, p, a {
+  font-family: "Sono", "sans-serif";
+}
+
 body {
   font-size: 20px;
 }
@@ -282,7 +286,7 @@ form {
 
 header {
   background: #f5deb3;
-  height: 90vh;
+  height: 75vh;
 }
 header .headerWrapper {
   width: 40%;
@@ -380,6 +384,9 @@ ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   text-align: center;
 }
 .formContainer .brewerySelection .selectStyles1,
@@ -391,19 +398,27 @@ ul li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 1rem;
+  margin: 3rem;
 }
 .formContainer .brewerySelection .selectStyles1 label,
 .formContainer .brewerySelection .selectStyles2 label {
-  margin-bottom: 2rem;
+  font-family: "Sono", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.formContainer .brewerySelection .selectStyles1 label span,
+.formContainer .brewerySelection .selectStyles2 label span {
+  display: block;
 }
 .formContainer .brewerySelection .selectStyles1 select,
 .formContainer .brewerySelection .selectStyles2 select {
+  font-family: "Sono", sans-serif;
   text-align: center;
-  content: "";
-  top: 14px;
-  right: 10px;
+  position: relative;
+  top: 2rem;
+  right: -0.25rem;
   height: 3rem;
+  width: 12rem;
   background-color: #f5deb3;
   border: 2px solid #b17307;
 }
@@ -417,12 +432,14 @@ input[type=submit] {
   background-color: #f5deb3;
   color: #b17307;
   text-transform: uppercase;
+  font-family: "Lato", sans-serif;
   font-size: 1rem;
   width: 30%;
-  padding: 10px 35px;
+  padding: 10px 35px 10px 30px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   font-weight: 600;
+  margin-top: 3rem;
 }
 input[type=submit]:hover, input[type=submit]:focus {
   background-color: #b17307;
@@ -451,6 +468,17 @@ input[type=submit]:hover, input[type=submit]:focus {
 }
 .breweryBox p {
   text-align: center;
+  color: #dccc9b;
+  padding: 0.5rem;
+}
+.breweryBox a {
+  text-decoration: none;
+  color: #eed9b1;
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+.breweryBox a ::after {
+  color: #000000;
 }
 
 #container {
@@ -536,7 +564,7 @@ input[type=submit]:hover, input[type=submit]:focus {
 .beer-foam {
   position: absolute;
   top: 1rem;
-  left: 41rem;
+  left: 40.65rem;
   height: 180px;
 }
 
@@ -639,6 +667,28 @@ input[type=submit]:hover, input[type=submit]:focus {
   left: 385px;
 }
 
+@media (min-width: 1800px) {
+  .wrapper {
+    max-width: 1900px;
+  }
+  header {
+    height: 75vh;
+  }
+  header .beer-foam {
+    left: 45rem;
+  }
+  header label {
+    font-size: 2rem;
+  }
+  header select {
+    width: 15rem;
+    right: -5rem;
+    height: 3rem;
+  }
+  header input[type=submit] {
+    margin-top: 3rem;
+  }
+}
 @media (max-width: 1400px) {
   header {
     height: 80vh;
