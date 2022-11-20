@@ -15,7 +15,8 @@ breweryApp.getBrewery = (city, type) => {
     })
     .then(data => {
         document.querySelector('#breweryDisplay').innerHTML = '';
-        breweryApp.displayData(data);
+        breweryApp.inputChecker(data);
+        
     })
 }
 
@@ -23,30 +24,21 @@ breweryApp.getBrewery = (city, type) => {
 
 // For each loop that displays the data recieved from the api call
 breweryApp.displayData = (results) => {
+        
         results.forEach((result) => {
         
         const breweryName = document.createElement('h2');
         breweryName.innerText = result.name;
       
-
-        const breweryCity = document.createElement('h4');
-        breweryCity.innerText = result.city;
-    
-        
-        const breweryType = document.createElement('h3');
-        breweryType.innerText = result.brewery_type;
-
-        
         const breweryContainer = document.createElement('li');
         breweryContainer.classList.add('breweryBox')
 
-        breweryContainer.append(breweryName, breweryType, breweryCity);
+        breweryContainer.append(breweryName);
 
         document.querySelector('#breweryDisplay').append(breweryContainer);
 
     })
 }
-
 
 
 // Event Listener for drop down selection
@@ -58,6 +50,19 @@ breweryApp.getValues = () => {
             breweryApp.getBrewery(city, type);
     })
 }
+
+
+// Error handling 
+breweryApp.inputChecker = (data) => {
+    if (data.length === 0){
+        const errorMessage = document.createElement('h2');
+        errorMessage.innerText = ("Sorry there doesnt seem to be any results for that combination");
+        document.querySelector('#breweryDisplay').append(errorMessage);   
+    }
+    
+    else {
+        breweryApp.displayData(data);
+    }}
 
 
 // App intilization
