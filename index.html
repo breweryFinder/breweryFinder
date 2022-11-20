@@ -11,52 +11,85 @@
 
 <body>
     <header>
-        <h1 id="pageTitle">Choose Your Brewery!</h1>
-        <div class="formContainer">
+        <div class="headerWrapper">
 
-            <!-- City Selector -->
-            <form action="" class="city">
-                <label for="city">Which City do you want to visit?</label>
-                <select name="city" id="city">
-                    <option value="empty">Please Select:</option>
-                    <option value="los_angeles">Los Angeles</option>
-                    <option value="san_diego">San Diego</option>
-                    <option value="chicago">Chicago</option>
-                    <option value="toronto">Toronto</option>
-                    <option value="city">City 5</option>
-                    <option value="city">City 6</option>
-                    <option value="city">City 7</option>
-                    <option value="city">City 8</option>
-                    <option value="city">City 9</option>
-                    <option value="city">City 10</option>
-                </select>
-
-            <!-- Brewery Type Selector -->
-
-                <label for="type">What kind of brewery do you want?</label>
-                <select name="type" id="type">
-                    <option value="empty">Please Select:</option>
-                    <option value="micro">Micro</option>
-                    <option value="regional">Regional</option>
-                    <option value="brewpub">Brew Pub</option>
-                    <option value="bar">Bar</option>
-                </select>
-                
-                <input type="submit" id="getBreweryBtn"value="Get me a brewery!">
-            </form>
-           
+            <div class="beer-foam">
+                <div class="foam-1"></div>
+                <div class="foam-2"></div>
+                <div class="foam-3"></div>
+                <div class="foam-4"></div>
+                <div class="foam-5"></div>
+                <div class="foam-6"></div>
+                <div class="foam-7"></div>
+                <div class="foam-8"></div>
+                <div class="foam-9"></div>
+                <div class="foam-10"></div>
+                <div class="foam-11"></div>
+                <div class="foam-12"></div>
+                <div class="foam-13"></div>
+                <div class="foam-14"></div>
+                <div class="foam-15"></div>
+            </div>
+            
+            <div id="container">
+                <h1>Choose Your Brewery!</h1>
+                <div id="top">
+                    <div id="liquid">
+                        <div class="bubble bubble1"></div>
+                        <div class="bubble bubble2"></div>
+                        <div class="bubble bubble3"></div>
+                        <div class="bubble bubble4"></div>
+                        <div class="bubble bubble5"></div>
+                    </div>
+                </div> <!-- END .top -->
+            </div> <!-- END .container -->
+            <div class="formContainer">
+                <!-- City Selector -->
+                <div class="dropdownFlex">
+                    <form action="" class="brewerySelection">
+                        <div class="selectStyles1">
+                            <label for="city">Which city do you want to visit?</label>
+                            <select name="city" id="city">
+                                <option value="empty">Please Select:</option>
+                                <option value="los_angeles">Los Angeles</option>
+                                <option value="san_diego">San Diego</option>
+                                <option value="chicago">Chicago</option>
+                                <option value="boston">Boston</option>
+                                <option value="ohio">Ohio</option>
+                                <option value="atlanta">Atlanta</option>
+                                <option value="seattle">Seattle</option>
+                                <option value="miami">Miami</option>
+                                <option value="illinois">Illinois</option>
+                                <option value="oklahoma">Oklahoma</option>
+                            </select>
+                        </div>
         
-        </div>
+                    <!-- Brewery Type Selector -->
+                        <div class="selectStyles2">
+                            <label for="type">What kind of brewery do you want?</label>
+                            <select name="type" id="type">
+                            <option value="empty">Please Select:</option>
+                            <option value="micro">Micro Brew</option>
+                            <option value="bar">Bar</option>
+                            <option value="brewpub">Brew Pub</option>
+                            <option value="regional">Regional</option>
+                            </select>
+                        </div>
+                </div> <!-- END .dropdownFlex -->
+                    
+                    <input type="submit" id="getBreweryBtn"value="Show Results">
+                </form> <!-- END form-->
+            </div> <!-- END .formContainer-->
+        </div> <!-- END .headerWrapper -->
     </header>
 
     <main>
         <div class="wrapper">
             <h2>Your Choices Are:</h2>
             <ul id="breweryDisplay">
-                    <!-- <li>
-                        <h2>Name of Brewery</h2>
-                        <h3>City</h3>
-                        <h4>Brewery Type</h4>
+                    <!-- <li class="breweryBox">
+                        <p>Name of Brewery</p>
+                        <a href="website">Go to Site!</a>
                     </li> -->
             </ul>
         </div>

@@ -19,7 +19,7 @@ section {
 
 h1 {
     font-size: 2em;
-    // margin: .67em 0
+    margin: .67em 0
 }
 
 figcaption,
@@ -230,7 +230,18 @@ template {
     display: none
 }
 
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: '';
+    clear: both;
+    height: 0;
+}
+
 html {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -251,4 +262,74 @@ html {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+body {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 20px;
+}
+
+header,
+form {
+    padding: 25px;
+}
+
+main {
+    background: #333;
+    color: #fff;
+    padding: 0 0 25px;
+}
+
+.wrapper {
+    max-width: 1750px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0 0 25px;
+}
+
+footer p {
+    margin-top: 0;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+/* STYLE BREWERY INPUT BUTTIN  */
+#getBreweryBtn {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 80px;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    list-style: none;
+
+}
+
+.breweryBox {
+    border: 2px solid white;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+
 }

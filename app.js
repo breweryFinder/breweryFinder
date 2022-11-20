@@ -33,25 +33,17 @@ breweryApp.getAPI = (city, type) => {
 breweryApp.displayData = (results) => {
     results.forEach((result) => {
         
-        const breweryName = document.createElement('h2');
+        const breweryName = document.createElement('p');
         breweryName.innerText = result.name;
-        // console.log(result.name)
-        console.log(breweryName)
 
-        const breweryCity = document.createElement('h4');
-        breweryCity.innerText = result.city;
-        // console.log(result.city)
-        console.log(breweryCity)
-        
-        const breweryType = document.createElement('h3');
-        breweryType.innerText = result.brewery_type;
-        // console.log(result.brewery_type)
-        console.log(breweryType)
+        const breweryWebsite = document.createElement('a');
+        breweryWebsite.setAttribute('href', result.website_url)
+        breweryWebsite.innerText = `Go to website!`;
         
         const breweryContainer = document.createElement('li');
         breweryContainer.classList.add('breweryBox')
 
-        breweryContainer.append(breweryName, breweryType, breweryCity);
+        breweryContainer.append(breweryName, breweryWebsite);
 
         document.querySelector('#breweryDisplay').append(breweryContainer);
 

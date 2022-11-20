@@ -1,0 +1,75 @@
+@use "./homepage";
+
+// ORIGINAL STYLES ARE SET FOR 1750PX MONITOR
+
+
+// LAPTOP
+@media (max-width: 1400px) {
+    header {
+        height: 80vh;
+
+        .wrapper {
+            width: 95%;
+        }
+
+        .headerWrapper {
+            width: 40%;
+
+        }
+
+        .beer-foam {
+            left: 30rem;
+        }
+        
+        h1 {
+            font-size: 2.35rem;
+        }
+        
+        input[type="submit"] {
+            width: 40%;
+            margin-top: 1rem;
+            padding: 10px 30px;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    header {
+        .beer-foam {
+            left: 26.25rem;
+        }
+
+        .selectStyles1,
+        .selectStyles2 {
+            label {
+                font-size: 1rem;
+            }
+            select {
+                font-size: 1rem;
+            }
+        }
+        input[type="submit"] {
+            font-size: .75rem;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+
+}
+
+@media (max-width: 1000px) {
+
+}
+
+// TABLET
+
+@media (max-width: 850px) {
+
+}
+
+// MOBILE
+
+@media (max-width: 550px) {
+
+}
