@@ -7,6 +7,7 @@
     position: relative;
     /* ^ NEED this to keep bubbles in correct alignment */
     top: 20px;
+    
 }
 
 #container div {
@@ -17,6 +18,8 @@
     border-top: 0;
     border-radius: 0 0 30px 30px;
     height: 200px;
+    position: relative;
+    
 }
 
 #liquid {

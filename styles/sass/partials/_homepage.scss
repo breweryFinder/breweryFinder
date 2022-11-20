@@ -118,6 +118,7 @@ ul {
         height: 3rem;
         background-color: variables.$background1;
         border: 2px solid variables.$background2;
+        
       }
       option {
         text-align: center;
@@ -133,10 +134,11 @@ input[type="submit"] {
   color: variables.$h1;
   text-transform: uppercase;
   font-size: 1rem;
-  width: 30%;
+  width: 40%;
   padding: 10px 35px;
   transition: .5s;
   font-weight: 600;
+  
   
   &:hover,
   &:focus {
@@ -162,4 +164,8 @@ input[type="submit"] {
     text-align: center;
   }
 
+}
+
+.errorMessageText {
+ 
 }
