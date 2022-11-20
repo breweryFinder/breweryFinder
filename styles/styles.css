@@ -434,13 +434,8 @@ input[type=submit] {
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
   font-size: 1rem;
-<<<<<<< HEAD
-  width: 40%;
-  padding: 10px 35px;
-=======
   width: 30%;
   padding: 10px 35px 10px 30px;
->>>>>>> 9de52e6644f4d590c602d53d38349c20d9ab8984
   -webkit-transition: 0.5s;
   transition: 0.5s;
   font-weight: 600;
@@ -502,11 +497,6 @@ input[type=submit]:hover, input[type=submit]:focus {
 .top {
   border-top: 0;
   border-radius: 0 0 30px 30px;
-<<<<<<< HEAD
-  height: 200px;
-  position: relative;
-=======
->>>>>>> 9de52e6644f4d590c602d53d38349c20d9ab8984
 }
 
 .liquid {
@@ -976,4 +966,15 @@ header .beerFoam .foam20 {
     gap: 20px;
     overflow: hidden;
   }
+}
+footer {
+  background-color: black;
+  margin: 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+footer p {
+  margin: 0;
+  font-size: 1rem;
 }
