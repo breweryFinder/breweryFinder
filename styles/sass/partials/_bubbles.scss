@@ -1,0 +1,194 @@
+@use "./homepage";
+
+#container {
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    /* ^ NEED this to keep bubbles in correct alignment */
+    top: 20px;
+}
+
+#container div {
+    position: relative;
+}
+
+#top {
+    border-top: 0;
+    border-radius: 0 0 30px 30px;
+    height: 200px;
+}
+
+#liquid {
+    // bottom: -10rem;
+    height: 1000px;
+    overflow: hidden;
+    // width: 2500px;
+    left: 15rem;
+}
+
+#liquid .bubble {
+    -webkit-animation-name: bubble;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    background-color: rgba(255, 255, 255, 0.2);
+    bottom: 0;
+    border-radius: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+@-webkit-keyframes bubble {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        background-color: rgba(255, 255, 255, 0.2);
+        bottom: 80px;
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0);
+        bottom: 160px;
+    }
+}
+
+.bubble1 {
+    left: 10px;
+    -webkit-animation-delay: 1000ms;
+    -webkit-animation-duration: 1000ms;
+}
+
+.bubble2 {
+    left: 50px;
+    -webkit-animation-delay: 700ms;
+    -webkit-animation-duration: 1100ms;
+}
+
+.bubble3 {
+    left: 100px;
+    -webkit-animation-delay: 1200ms;
+    -webkit-animation-duration: 1300ms;
+}
+
+.bubble4 {
+    left: 130px;
+    -webkit-animation-delay: 1100ms;
+    -webkit-animation-duration: 700ms;
+}
+
+.bubble5 {
+    left: 170px;
+    -webkit-animation-delay: 1300ms;
+    -webkit-animation-duration: 800ms;
+}
+
+/* Foam */
+
+.beer-foam {
+    position: absolute;
+    top: 1rem;
+    left: 41rem;
+    height: 180px;
+}
+
+.foam-1,
+.foam-2,
+.foam-3,
+.foam-4,
+.foam-5,
+.foam-6,
+.foam-7,
+.foam-8,
+.foam-9,
+.foam-10,
+.foam-11,
+.foam-12,
+.foam-13,
+.foam-14,
+.foam-15 {
+    float: left;
+    position: absolute;
+    z-index: 999;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: #fefefe;
+}
+
+.foam-1 {
+    top: -30px;
+    left: -10px;
+}
+
+.foam-2 {
+    top: -35px;
+    left: 20px;
+}
+
+.foam-3 {
+    top: -25px;
+    left: 50px;
+}
+
+.foam-4 {
+    top: -35px;
+    left: 80px;
+}
+
+.foam-5 {
+    top: -30px;
+    left: 110px;
+}
+
+.foam-6 {
+    top: -20px;
+    left: 140px;
+}
+
+.foam-7 {
+    top: -30px;
+    left: 160px;
+}
+
+.foam-8 {
+    top: -30px;
+    left: 170px;
+}
+
+.foam-9 {
+    top: -35px;
+    left: 170px;
+}
+
+.foam-10 {
+    top: -25px;
+    left: 210px;
+}
+
+.foam-11 {
+    top: -35px;
+    left: 250px;
+}
+
+.foam-12 {
+    top: -30px;
+    left: 270px;
+}
+
+.foam-13 {
+    top: -20px;
+    left: 300px;
+}
+
+.foam-14 {
+    top: -30px;
+    left: 340px;
+}
+
+.foam-15 {
+    top: -30px;
+    left: 385px;
+}
+
