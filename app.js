@@ -30,15 +30,15 @@ breweryApp.displayData = (results) => {
         
         const breweryName = document.createElement('p');
         breweryName.innerText = result.name;
-
+        
         const breweryWebsite = document.createElement('a');
         breweryWebsite.setAttribute('href', result.website_url)
-        breweryWebsite.innerText = "Go to website!";
+        breweryWebsite.innerText = `Go to website!`;
       
         const breweryContainer = document.createElement('li');
         breweryContainer.classList.add('breweryBox')
 
-        breweryContainer.append(breweryName, breweryWebsite);
+        breweryContainer.append(breweryName, breweryWebsite, breweryWebsite);
 
         document.querySelector('#breweryDisplay').append(breweryContainer);
 

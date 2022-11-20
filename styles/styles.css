@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:700,900);
-@import url(https://fonts.googleapis.com/css?family=Lato:700,900);
+@import url("https://fonts.googleapis.com/css2?family=Sono&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -265,12 +265,16 @@ h1, h2, body {
   font-family: "Lato", "Helvetica", "Arial", sans-serif;
 }
 
+label, select, p, a {
+  font-family: "Sono", "sans-serif";
+}
+
 body {
   font-size: 20px;
 }
 
 .wrapper {
-  max-width: 1750px;
+  max-width: 1800px;
   width: 80%;
   margin: 0 auto;
 }
@@ -282,7 +286,7 @@ form {
 
 header {
   background: #f5deb3;
-  height: 90vh;
+  height: 75vh;
 }
 header .headerWrapper {
   width: 40%;
@@ -380,6 +384,9 @@ ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   text-align: center;
 }
 .formContainer .brewerySelection .selectStyles1,
@@ -391,19 +398,27 @@ ul li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 1rem;
+  margin: 3rem;
 }
 .formContainer .brewerySelection .selectStyles1 label,
 .formContainer .brewerySelection .selectStyles2 label {
-  margin-bottom: 2rem;
+  font-family: "Sono", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.formContainer .brewerySelection .selectStyles1 label span,
+.formContainer .brewerySelection .selectStyles2 label span {
+  display: block;
 }
 .formContainer .brewerySelection .selectStyles1 select,
 .formContainer .brewerySelection .selectStyles2 select {
+  font-family: "Sono", sans-serif;
   text-align: center;
-  content: "";
-  top: 14px;
-  right: 10px;
+  position: relative;
+  top: 2rem;
+  right: -0.25rem;
   height: 3rem;
+  width: 12rem;
   background-color: #f5deb3;
   border: 2px solid #b17307;
 }
@@ -417,12 +432,19 @@ input[type=submit] {
   background-color: #f5deb3;
   color: #b17307;
   text-transform: uppercase;
+  font-family: "Lato", sans-serif;
   font-size: 1rem;
+<<<<<<< HEAD
   width: 40%;
   padding: 10px 35px;
+=======
+  width: 30%;
+  padding: 10px 35px 10px 30px;
+>>>>>>> 9de52e6644f4d590c602d53d38349c20d9ab8984
   -webkit-transition: 0.5s;
   transition: 0.5s;
   font-weight: 600;
+  margin-top: 3rem;
 }
 input[type=submit]:hover, input[type=submit]:focus {
   background-color: #b17307;
@@ -451,9 +473,20 @@ input[type=submit]:hover, input[type=submit]:focus {
 }
 .breweryBox p {
   text-align: center;
+  color: #dccc9b;
+  padding: 0.5rem;
+}
+.breweryBox a {
+  text-decoration: none;
+  color: #eed9b1;
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+.breweryBox a ::after {
+  color: #000000;
 }
 
-#container {
+.container {
   height: 300px;
   margin: 0 auto;
   overflow: hidden;
@@ -462,24 +495,27 @@ input[type=submit]:hover, input[type=submit]:focus {
   top: 20px;
 }
 
-#container div {
+.container div {
   position: relative;
 }
 
-#top {
+.top {
   border-top: 0;
   border-radius: 0 0 30px 30px;
+<<<<<<< HEAD
   height: 200px;
   position: relative;
+=======
+>>>>>>> 9de52e6644f4d590c602d53d38349c20d9ab8984
 }
 
-#liquid {
-  height: 1000px;
+.liquid {
+  height: 300px;
   overflow: hidden;
-  left: 15rem;
+  left: 6rem;
 }
 
-#liquid .bubble {
+.liquid .bubble {
   -webkit-animation-name: bubble;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
@@ -494,9 +530,15 @@ input[type=submit]:hover, input[type=submit]:focus {
   0% {
     bottom: 0;
   }
+  25% {
+    bottom: 40px;
+  }
   50% {
     background-color: rgba(255, 255, 255, 0.2);
     bottom: 80px;
+  }
+  75% {
+    bottom: 120px;
   }
   100% {
     background-color: rgba(255, 255, 255, 0);
@@ -533,30 +575,129 @@ input[type=submit]:hover, input[type=submit]:focus {
   -webkit-animation-duration: 800ms;
 }
 
-/* Foam */
-.beer-foam {
+.bubble6 {
+  left: 10px;
+  -webkit-animation-delay: 1000ms;
+  -webkit-animation-duration: 900ms;
+}
+
+.bubble7 {
+  left: 230px;
+  -webkit-animation-delay: 1700ms;
+  -webkit-animation-duration: 1000ms;
+}
+
+.bubble8 {
+  left: 260px;
+  -webkit-animation-delay: 1900ms;
+  -webkit-animation-duration: 1100ms;
+}
+
+.bubble9 {
+  left: 300px;
+  -webkit-animation-delay: 2100ms;
+  -webkit-animation-duration: 1300ms;
+}
+
+.bubble10 {
+  left: 330px;
+  -webkit-animation-delay: 2400ms;
+  -webkit-animation-duration: 1500ms;
+}
+
+.bubble11 {
+  left: 360px;
+  -webkit-animation-delay: 2700ms;
+  -webkit-animation-duration: 1700ms;
+}
+
+.bubble12 {
+  left: 390px;
+  -webkit-animation-delay: 3000ms;
+  -webkit-animation-duration: 1900ms;
+}
+
+.bubble13 {
+  left: 420px;
+  -webkit-animation-delay: 3300ms;
+  -webkit-animation-duration: 2100ms;
+}
+
+.bubble14 {
+  left: 450px;
+  -webkit-animation-delay: 3500ms;
+  -webkit-animation-duration: 2300ms;
+}
+
+.bubble15 {
+  left: 480px;
+  -webkit-animation-delay: 3700ms;
+  -webkit-animation-duration: 1700ms;
+}
+
+.bubble16 {
+  left: 510px;
+  -webkit-animation-delay: 3900ms;
+  -webkit-animation-duration: 1900ms;
+}
+
+.bubble17 {
+  left: 530px;
+  -webkit-animation-delay: 4200ms;
+  -webkit-animation-duration: 2100ms;
+}
+
+.bubble18 {
+  left: 560px;
+  -webkit-animation-delay: 4500ms;
+  -webkit-animation-duration: 2300ms;
+}
+
+.bubble20 {
+  left: 590px;
+  -webkit-animation-delay: 4800ms;
+  -webkit-animation-duration: 2500ms;
+}
+
+.bubble20 {
+  left: 620px;
+  -webkit-animation-delay: 5100ms;
+  -webkit-animation-duration: 2800ms;
+}
+
+/* FOAM */
+.beerFoam {
   position: absolute;
   top: 1rem;
-  left: 41rem;
+  left: 33rem;
   height: 180px;
 }
 
-.foam-1,
-.foam-2,
-.foam-3,
-.foam-4,
-.foam-5,
-.foam-6,
-.foam-7,
-.foam-8,
-.foam-9,
-.foam-10,
-.foam-11,
-.foam-12,
-.foam-13,
-.foam-14,
-.foam-15 {
-  float: left;
+.foam1,
+.foam2,
+.foam3,
+.foam4,
+.foam5,
+.foam6,
+.foam7,
+.foam8,
+.foam9,
+.foam10,
+.foam11,
+.foam12,
+.foam13,
+.foam14,
+.foam15,
+.foam16,
+.foam17,
+.foam18,
+.foam19,
+.foam20,
+.foam21,
+.foam22,
+.foam23,
+.foam24,
+.foam25 {
   position: absolute;
   z-index: 999;
   width: 70px;
@@ -565,82 +706,193 @@ input[type=submit]:hover, input[type=submit]:focus {
   background-color: #fefefe;
 }
 
-.foam-1 {
+.foam1 {
   top: -30px;
   left: -10px;
 }
 
-.foam-2 {
+.foam2 {
   top: -35px;
   left: 20px;
 }
 
-.foam-3 {
+.foam3 {
   top: -25px;
   left: 50px;
 }
 
-.foam-4 {
+.foam4 {
   top: -35px;
   left: 80px;
 }
 
-.foam-5 {
+.foam5 {
   top: -30px;
   left: 110px;
 }
 
-.foam-6 {
+.foam6 {
   top: -20px;
   left: 140px;
 }
 
-.foam-7 {
+.foam7 {
   top: -30px;
   left: 160px;
 }
 
-.foam-8 {
+.foam8 {
   top: -30px;
   left: 170px;
 }
 
-.foam-9 {
+.foam9 {
   top: -35px;
   left: 170px;
 }
 
-.foam-10 {
+.foam10 {
   top: -25px;
   left: 210px;
 }
 
-.foam-11 {
+.foam11 {
   top: -35px;
   left: 250px;
 }
 
-.foam-12 {
+.foam12 {
   top: -30px;
   left: 270px;
 }
 
-.foam-13 {
+.foam13 {
   top: -20px;
   left: 300px;
 }
 
-.foam-14 {
+.foam14 {
   top: -30px;
   left: 340px;
 }
 
-.foam-15 {
+.foam15 {
   top: -30px;
   left: 385px;
 }
 
-@media (max-width: 1400px) {
+.foam16 {
+  top: -20px;
+  left: 410px;
+}
+
+.foam17 {
+  top: -30px;
+  left: 445px;
+}
+
+.foam18 {
+  top: -35px;
+  left: 500px;
+}
+
+.foam19 {
+  top: -30px;
+  left: 530px;
+}
+
+.foam20 {
+  top: -20px;
+  left: 570px;
+}
+
+.foam21 {
+  top: -30px;
+  left: 600px;
+}
+
+.foam22 {
+  top: -25px;
+  left: 630px;
+}
+
+.foam23 {
+  top: -35px;
+  left: 675px;
+}
+
+.foam24 {
+  top: -30px;
+  left: 700px;
+  display: none;
+}
+
+.foam25 {
+  top: -30px;
+  left: 735px;
+  display: none;
+}
+
+@media (min-width: 1801px) {
+  .wrapper {
+    max-width: 1901px;
+  }
+  header {
+    height: 75vh;
+  }
+  header .beerFoam {
+    left: 34.5rem;
+  }
+  header label {
+    font-size: 2rem;
+  }
+  header select {
+    width: 15rem;
+    right: -5rem;
+    height: 3rem;
+  }
+  header input[type=submit] {
+    margin-top: 3rem;
+  }
+  header .liquid {
+    left: 9rem;
+  }
+}
+@media (max-width: 1701px) {
+  header .beerFoam {
+    left: 32rem;
+  }
+  header .beerFoam .foam22,
+header .beerFoam .foam23 {
+    display: none;
+  }
+  header label {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1601px) {
+  header .beerFoam {
+    left: 29.25rem;
+  }
+  header .liquid {
+    left: 5rem;
+  }
+  header input[type=submit] {
+    padding: 10px 35px 10px 20px;
+  }
+}
+@media (max-width: 1501px) {
+  header .beerFoam {
+    left: 27rem;
+  }
+  header .beerFoam .foam21 {
+    display: none;
+  }
+  header input[type=submit] {
+    padding: 10px;
+  }
+}
+@media (max-width: 1401px) {
   header {
     height: 80vh;
   }
@@ -650,7 +902,7 @@ input[type=submit]:hover, input[type=submit]:focus {
   header .headerWrapper {
     width: 40%;
   }
-  header .beer-foam {
+  header .beerFoam {
     left: 30rem;
   }
   header h1 {
@@ -663,7 +915,7 @@ input[type=submit]:hover, input[type=submit]:focus {
   }
 }
 @media (max-width: 1300px) {
-  header .beer-foam {
+  header .beerFoam {
     left: 26.25rem;
   }
   header .selectStyles1 label,
