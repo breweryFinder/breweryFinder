@@ -1,17 +1,17 @@
 @use "./homepage";
 
-// ORIGINAL STYLES ARE SET FOR 1750PX MONITOR
+// ORIGINAL STYLES ARE SET FOR 1800PX MONITOR
 
 // LARGE SCREENS
-@media (min-width: 1800px) {
+@media (min-width: 1801px) {
     .wrapper {
-        max-width: 1900px;
+        max-width: 1901px;
     }
     header {
         height: 75vh;
 
-        .beer-foam {
-            left: 45rem;
+        .beerFoam {
+            left: 34.5rem;
         }
         label {
             font-size: 2rem;
@@ -24,12 +24,66 @@
         input[type="submit"] {
             margin-top: 3rem;
         }
+
+        .liquid {
+            left: 9rem;
+        }
     }
 }
 
+@media (max-width: 1701px) {
+    header {
+        .beerFoam {
+            left: 32rem;
+
+            .foam22, 
+            .foam23 {
+                display: none;
+            }
+        }
+
+        label {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media (max-width: 1601px) {
+    header {
+        .beerFoam {
+            left: 29.25rem;
+        }
+
+        .liquid {
+            left: 5rem;
+        }
+
+        input[type="submit"] {
+            padding: 10px 35px 10px 20px;
+        }
+    }
+}
+
+@media (max-width: 1501px) {
+    header {
+        .beerFoam {
+            left: 27rem;
+
+            .foam21 {
+                display: none;
+            }
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+        }
+    }
+}
+
+// SMALLER SCREENS
 
 // LAPTOP
-@media (max-width: 1400px) {
+@media (max-width: 1401px) {
     header {
         height: 80vh;
 
@@ -42,7 +96,7 @@
 
         }
 
-        .beer-foam {
+        .beerFoam {
             left: 30rem;
         }
         
@@ -60,7 +114,7 @@
 
 @media (max-width: 1300px) {
     header {
-        .beer-foam {
+        .beerFoam {
             left: 26.25rem;
         }
 
