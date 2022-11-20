@@ -930,3 +930,50 @@ header .selectStyles2 select {
     font-size: 0.75rem;
   }
 }
+@media (max-width: 851px) {
+  header {
+    height: 90vh;
+  }
+  header .headerWrapper {
+    width: 65%;
+  }
+  header .beerFoam {
+    left: 8.75rem;
+  }
+  header .beerFoam .foam19,
+header .beerFoam .foam20 {
+    display: none;
+  }
+  header .selectStyles1,
+header .selectStyles2 {
+    margin: 1rem;
+  }
+  header .liquid {
+    left: 2rem;
+  }
+  ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    overflow: hidden;
+  }
+}
+@media (max-width: 751px) {
+  header {
+    height: 90vh;
+  }
+  header .headerWrapper {
+    width: 75%;
+  }
+  header .beerFoam {
+    left: 5.5rem;
+  }
+  header .beerFoam .foam19,
+header .beerFoam .foam20 {
+    display: none;
+  }
+  ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    overflow: hidden;
+  }
+}
