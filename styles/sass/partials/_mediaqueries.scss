@@ -1,4 +1,5 @@
 @use "./homepage";
+@use "./footer";
 
 // ORIGINAL STYLES ARE SET FOR 1800PX MONITOR
 
@@ -206,6 +207,41 @@
 
 // MOBILE
 
-@media (max-width: 550px) {
+@media (max-width: 429px) {
+    header {
+        .beerFoam {
+            left: 0;
+            .foam18,
+            .foam17,
+            .foam16,
+            .foam15,
+            .foam1 {
+                display: none;
+            }
+        }
+    }
+   #breweryDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    .breweryBox {
+        justify-content: center;
+        
+    }
+   }
 
+   .brewerySelection {
+    flex-direction: column;
+   }
+
+   header {
+    .container {
+        height: 200px;
+    }
+       input[type="submit"] {
+        width: 260px;
+        margin-top: 90px;
+       }
+   }
 }

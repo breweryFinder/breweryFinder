@@ -823,6 +823,18 @@ input[type=submit]:hover, input[type=submit]:focus {
   display: none;
 }
 
+footer {
+  background-color: black;
+  margin: 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
 @media (min-width: 1801px) {
   .wrapper {
     max-width: 1901px;
@@ -967,14 +979,44 @@ header .beerFoam .foam20 {
     overflow: hidden;
   }
 }
-footer {
-  background-color: black;
-  margin: 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-footer p {
-  margin: 0;
-  font-size: 1rem;
+@media (max-width: 429px) {
+  header .beerFoam {
+    left: 0;
+  }
+  header .beerFoam .foam18,
+header .beerFoam .foam17,
+header .beerFoam .foam16,
+header .beerFoam .foam15,
+header .beerFoam .foam1 {
+    display: none;
+  }
+  #breweryDisplay {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+  }
+  #breweryDisplay .breweryBox {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .brewerySelection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .container {
+    height: 200px;
+  }
+  header input[type=submit] {
+    width: 260px;
+    margin-top: 90px;
+  }
 }

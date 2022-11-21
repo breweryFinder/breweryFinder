@@ -45,12 +45,6 @@ breweryApp.displayData = (results) => {
     })
 }
 
-// Function to clear the user input results
-breweryApp.inputRefresh = () => {
-    document.querySelector('#inputDisplay').innerHTML = '';
-    document.querySelector('#inputDisplay').innerHTML = '<h2>Your Choices Are:</h2><ul id="breweryDisplay"></ul>';
-
-}
 
 
 // Event Listener for drop down selection
@@ -67,16 +61,18 @@ breweryApp.getValues = () => {
 // Error handling 
 breweryApp.inputChecker = (data) => {
     if (data.length === 0){
+        document.querySelector('#errorMessageBox').innerHTML = '';
         
         const errorMessage = document.createElement('h2');
         errorMessage.innerText = ("Sorry there doesnt seem to be any results for that combination");
         errorMessage.classList.add('errorMessageText');
 
-        document.querySelector('#inputDisplay').append(errorMessage);
+        document.querySelector('#errorMessageBox').append(errorMessage);
     }
     
     else {
         
+        document.querySelector('#errorMessageBox').innerHTML = '';
         breweryApp.displayData(data);
     }}
 
