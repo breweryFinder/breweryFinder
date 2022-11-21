@@ -245,3 +245,21 @@
        }
    }
 }
+
+@media (max-width: 376px) {
+    header {
+        height: 825px;
+        .beerFoam {
+            .foam14 {
+                display: none;
+            }
+        }
+        .container {
+            height: 200px;
+        }
+           input[type="submit"] {
+            margin-bottom: 90px;
+           }
+    }
+    
+}

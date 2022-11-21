@@ -1020,3 +1020,17 @@ header .beerFoam .foam1 {
     margin-top: 90px;
   }
 }
+@media (max-width: 376px) {
+  header {
+    height: 825px;
+  }
+  header .beerFoam .foam14 {
+    display: none;
+  }
+  header .container {
+    height: 200px;
+  }
+  header input[type=submit] {
+    margin-bottom: 90px;
+  }
+}
